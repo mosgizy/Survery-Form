@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+  background-image:url(survey-form-background.jpeg);
+  background-size: cover;
+  background-color:rgba(115,110,110,0.1);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+}
+
+.header{
+    background-color:rgba(150,144,144,0.3);
+    top:0px;
+    width:100%;
+    text-align:center;
+    margin-bottom:40px;
+    border-radius:15px 50px 30px;
+}
+
+.header h1{
+    text-shadow:1px 2px black;
+    font-family:monospace;
+    font-size:3.5em;
+}
+
+.header p{
+    font-size:1.1em;
+    font-family:Pattaya,Sans-serif;
+}
+
+.form{
+    background-color:rgba(150,144,144,0.3);
+    padding:50px 40px;
+    font-size:1em;
+    border-radius:25px 60px;
+    margin:0px 70px 30px 70px;
+}
+
+label{
+    display:inline-block;
+    font-size:1.2em;
+    font-family:Verdana;
+    font-weight:normal;
+}
+
+.form-input, #comment{
+    display:inline;
+    width:100%;
+    padding:12px 25px;
+    margin:12px 0;
+    border-radius:10px 25px;
+    margin-bottom:16px;
+    font-family:Vardana;
+    resize:vertical;
+}
+
+.form-input:hover{
+    background-color:rgba(155,144,144,0.1);
+}
+
+select{
+    background-color:white;OB
+    font-size:18px;
+    font-family:Vardana;
+}
+
+option{
+    font-size:18px;
+    font-family:Vardana;
+    background-color:rgba(150,144,144,0.2);
+    border-radius:20px;
+}
+
+#radio, #checkbox{
+    line-height:1.8;
+    margin-bottom:16px;
+}
+
+#checkbox label{
+    display:block;
+}
+
+#button{
+    display:flex;
+    width:100%;
+    justify-content:center;
+    align-items:center;
+}
+.submit-button{
+    background-color:rgba(155,144,144,0.2);
+    padding:12px 30px;
+    font-size:1.2em;
+    border-radius:12px 20px;
+    margin:auto;
+    transition:all 0.5s;
+    cursor:pointer;
+    text-align:center;
+}
+
+.submit-button span{
+    display:inline-block;
+    position:relative;
+    transition:0.5s;
+}
+
+.submit-button span:after{
+    content:'\00bb';
+    position:absolute;
+    opacity:0;
+    top:0;
+    right:-20px;
+    transition:0.5s;
+}
+
+.submit-button:hover span{
+    padding-right:25px;
+}
+
+.submit-button:hover span:after{
+    opacity:1;
+    right:0;
+}
+
+@media screen and (min-width:700px){
+    .container{
+	flex-direction:row;
+	align-content:flex-start;
+    }
+
+    .header{
+	flex:40%;
+	align-self:flex-start;
+    }
+
+    .header h1{
+	font-size:2.5em;
+	padding:12px 50px;
+    }
+
+    .header p{
+	font-size:16px;
+    }
+}
